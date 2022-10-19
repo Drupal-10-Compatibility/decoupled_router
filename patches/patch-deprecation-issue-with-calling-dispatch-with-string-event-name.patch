@@ -1,0 +1,13 @@
+diff --git a/src/Controller/PathTranslator.php b/src/Controller/PathTranslator.php
+index 5c9d295..a45d85a 100644
+--- a/src/Controller/PathTranslator.php
++++ b/src/Controller/PathTranslator.php
+@@ -71,7 +71,7 @@ class PathTranslator extends ControllerBase {
+     );
+     // Event subscribers are in charge of setting the appropriate response,
+     // including cacheability metadata.
+-    $this->eventDispatcher->dispatch(PathTranslatorEvent::TRANSLATE, $event);
++    $this->eventDispatcher->dispatch($event, PathTranslatorEvent::TRANSLATE);
+     /** @var \Drupal\Core\Cache\CacheableJsonResponse $response */
+     $response = $event->getResponse();
+     $response->headers->add(['Content-Type' => 'application/json']);

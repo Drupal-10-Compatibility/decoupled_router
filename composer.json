@@ -116,7 +116,8 @@
         "patches": {
             "drupal/decoupled_router": {
                 "Patch missing access check on query": "patches/patch-missing-access-check-on-query.patch",
-                "Patch deprecated issues with automated tests": "patches/patch-deprecated-issues-in-automated-tests.patch"
+                "Patch deprecated issues with automated tests": "patches/patch-deprecated-issues-in-automated-tests.patch",
+                "Patch calling EventDispatcherInterface::dispatch with string instead of event object": "patches/patch-deprecation-issue-with-calling-dispatch-with-string-event-name.patch"
             }
         }
     },
