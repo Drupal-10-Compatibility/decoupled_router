@@ -114,6 +114,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/decoupled_router": {
+                "Patch missing access check on query": "patches/patch-missing-access-check-on-query.patch"
+            }
         }
     },
     "scripts": {

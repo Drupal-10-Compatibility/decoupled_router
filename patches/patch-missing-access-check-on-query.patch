@@ -1,0 +1,12 @@
+diff --git a/src/EventSubscriber/RedirectPathTranslatorSubscriber.php b/src/EventSubscriber/RedirectPathTranslatorSubscriber.php
+index 9cde205..246f7e4 100644
+--- a/src/EventSubscriber/RedirectPathTranslatorSubscriber.php
++++ b/src/EventSubscriber/RedirectPathTranslatorSubscriber.php
+@@ -49,6 +49,7 @@ class RedirectPathTranslatorSubscriber extends RouterPathTranslatorSubscriber {
+       // Find if there is a redirect for this path.
+       $results = $redirect_storage
+         ->getQuery()
++        ->accessCheck(TRUE)
+         // Redirects are stored without the leading slash :-(.
+         ->condition('redirect_source.path', ltrim($destination, '/'))
+         ->execute();
